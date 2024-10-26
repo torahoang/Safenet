@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Child-Friendly Language Filter",
+  "version": "1.0",
+  "description": "Replaces explicit language with child-friendly alternatives.",
+  "permissions": ["scripting", "storage", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

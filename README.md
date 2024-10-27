@@ -10,7 +10,7 @@ SafeNet is a browser extension that transforms aggressive and inappropriate twee
 
 - 'JavaScript' for front-end development and tweet text alteration
 - 'Flask' for handling HTTP requests and API development
-- 'GUS-Net NER model' for detecting and classifying biased words
+- 'GUS-Net NER model' for detecting and classifying agressive/inappropriate words
 - 'LLaMA model' for rephrasing tweets
 
 ### How It Works 🧑‍🍳

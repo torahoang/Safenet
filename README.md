@@ -1,2 +1,2 @@
-# meowhacks
-A web extension that filter out bias and profanity content
+# SafeNet - Your Digital Guardian
+SafeNet is a browser extension that transforms aggressive and inappropriate tweets into family-friendly, professional content, particularly during controversial events like elections or sports competitions. The tool uses natural language processing to analyze and modify tweet content in real-time. By doing so, SafeNet aims to create a safer social media environment for children, teenagers, and adults who want to avoid the negative aspects of online interactions. This tool is specially made for parents, educators, and individuals seeking a more positive social media experience, helping to reduce stress and promote healthier online communication.

@@ -45,7 +45,7 @@ def predict():
     # Call your prediction function
     response = predict_ner_tags(sentence)
 
-    if count_unfair + count_Stereo > 5:
+    if count_unfair + count_Stereo > 3:
         # Generate your replacement text
         replacement_text = "Rephrased text"
     else:

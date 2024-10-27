@@ -1,5 +1,8 @@
 # SafeNet - Guard Your Feed, Free Your Mind🧠
-SafeNet is a browser extension that transforms aggressive and inappropriate tweets into family-friendly, professional content, particularly during controversial events like elections or sports competitions. The tool uses natural language processing to analyze and modify tweet content in real-time. By doing so, SafeNet aims to create a safer social media environment for children, teenagers, and adults who want to avoid the negative aspects of online interactions. This tool is specially made for parents, educators, and individuals seeking a more positive social media experience, helping to reduce stress and promote healthier online communication.
+SafeNet is a browser extension that transforms aggressive and inappropriate tweets into family-friendly, polite and professional content, particularly with controversial topics or during major events like elections, sport events. The tool uses natural language processing to analyze and modify tweet content in real-time. By doing so, SafeNet aims to create a safer social media environment for children, teenagers, and adults who want to avoid the negative aspects of online interactions. This tool is specially made for parents, educators, and individuals seeking a more positive social media experience, helping to reduce stress and promote healthier online communication.
+
+
+![Image](/public/SafeNet.png)
 
 ## How we build it 👷
 
@@ -7,13 +10,13 @@ SafeNet is a browser extension that transforms aggressive and inappropriate twee
 
 - 'JavaScript' for front-end development and tweet text alteration
 - 'Flask' for handling HTTP requests and API development
-- 'GUS-Net NER model' for detecting and classifying biased words
+- 'GUS-Net NER model' for detecting and classifying aggressive/inappropriate words
 - 'LLaMA model' for rephrasing tweets
 
 ### How It Works 🧑‍🍳
 - The extension activates when you are using twitter(X)
 - It analyze the content of each tweet using the GUS-Net NER model
-- Content is classify into 3 categories and help with identifying toxic/agressive tweet
+- Content is classify into 3 categories and help with identifying toxic/aggressive tweet
 - Undesireable tweets are feed into LLaMA model and are rephrased to be more friendly/polite
 - The original tweet is replace with the result from the LLaMA model
 
@@ -36,3 +39,4 @@ SafeNet is a browser extension that transforms aggressive and inappropriate twee
 ```
 
 ### License 
+`SafeNet` is licensed under MIT License.

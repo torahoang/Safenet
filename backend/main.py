@@ -2,9 +2,9 @@ import json
 import torch
 from flask import Flask, request, jsonify
 from transformers import BertTokenizerFast, BertForTokenClassification
-
+from flask_cors import CORS
 app = Flask(__name__)
-
+CORS(app)
 # Initialize important things
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 tokenizer = BertTokenizerFast.from_pretrained('bert-base-uncased')
@@ -35,6 +35,7 @@ def predict():
     count_Stereo = count_Gen = count_unfair = 0  # Reset counts for each request
 
     data = request.get_json()  # Get JSON data from request
+    print(data)
     sentence = data.get('sentence', '')  # Extract the sentence
 
     if not sentence:
@@ -43,7 +44,7 @@ def predict():
     # Call your prediction function
     response = predict_ner_tags(sentence)
 
-    if count_unfair + count_Stereo > 10:
+    if count_unfair + count_Stereo > 5:
         # Generate your replacement text
         replacement_text = "Some generated text"
     else:

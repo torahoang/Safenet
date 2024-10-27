@@ -4,7 +4,11 @@ async function replaceSentencesWithPGReadyText() {
 
     for (let element of tweetElements) {
         let text = element.innerText; // Get the inner text of the tweet
-//        const sentences = text.match(/[^.!?]*[.!?]/g); // Split text into sentences
+
+        // Skip if the tweet has already been checked or altered
+        if (text.endsWith("(safe)") || text.endsWith("(altered)")) {
+            continue;
+        }
 
         if (text) {
             // Send the original text to the backend for processing
@@ -12,7 +16,9 @@ async function replaceSentencesWithPGReadyText() {
 
             // Check the response from the backend
             if (response && response.replacementText !== "None") {
-                element.innerText = response.replacementText; // Update with the replacement text
+                element.innerText = response.replacementText + " (altered)";
+            } else {
+                element.innerText = text + " (safe)";
             }
         }
     }
@@ -22,6 +28,10 @@ async function sendToBackend(originalText) {
     try {
         const response = await fetch('http://127.0.0.1:5000/predict', { // Change the URL if needed
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',  // Specifies the content type
+                // 'Authorization': 'Bearer YOUR_TOKEN'  // Uncomment if authentication is needed
+            },
             body: JSON.stringify({ sentence: originalText }), // Send the original text
         });
 

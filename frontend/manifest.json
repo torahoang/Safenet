@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Child-Friendly Language Filter",
+  "name": "SafeNet",
   "version": "1.0",
   "description": "Replaces explicit language with child-friendly alternatives.",
   "permissions": ["scripting", "storage", "activeTab"],

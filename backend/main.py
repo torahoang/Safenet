@@ -1,8 +1,9 @@
-import json
 import torch
+import requests
 from flask import Flask, request, jsonify
 from transformers import BertTokenizerFast, BertForTokenClassification
 from flask_cors import CORS
+
 app = Flask(__name__)
 CORS(app)
 # Initialize important things
@@ -46,7 +47,7 @@ def predict():
 
     if count_unfair + count_Stereo > 5:
         # Generate your replacement text
-        replacement_text = "Some generated text"
+        replacement_text = "Rephrased text"
     else:
         replacement_text = "None"  # If no rephrasing is needed
 

@@ -39,3 +39,4 @@ SafeNet is a browser extension that transforms aggressive and inappropriate twee
 ```
 
 ### License 
+`SafeNet` is licensed under MIT License.
